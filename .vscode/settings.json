@@ -1,0 +1,60 @@
+{
+  // ==============================================
+  // Markdown All in One 插件配置
+  // ==============================================
+  "markdown.extension.toc.levels": "2..6", // 目录生成的标题级别（从h2到h6）
+  "markdown.extension.toc.updateOnSave": true, // 保存文件时自动更新目录
+  "markdown.extension.math.enabled": true, // 启用数学公式预览
+  "markdown.extension.katex.macros": {}, // 自定义KaTeX宏
+
+  // ==============================================
+  // Paste Image 插件配置（最重要！解决图片路径问题）
+  // ==============================================
+  // 截图粘贴后保存的路径
+  "pasteImage.path": "${projectRoot}/content/assets/images",
+  // ⚠️ 图片引用前缀，必须包含仓库名！否则部署后图片无法显示
+  "pasteImage.prefix": "/my-public-note/assets/images/",
+  // 图片默认命名格式：年月日时分秒，避免重名
+  "pasteImage.defaultName": "YYYY-MM-DD-HH-mm-ss",
+  // 粘贴图片时不显示确认框，直接保存
+  "pasteImage.showFilePathConfirmInputBox": false,
+
+  // ==============================================
+  // 文件显示配置
+  // ==============================================
+  "files.exclude": {
+    "**/.git": true,         // 隐藏.git文件夹
+    "**/node_modules": true, // 隐藏node_modules文件夹
+    "**/public": true,       // 隐藏构建输出目录
+    "**/.quartz": true,      // 隐藏Quartz缓存目录
+    "**/.DS_Store": true     // 隐藏macOS系统文件
+  },
+
+  // ==============================================
+  // 编辑器通用配置
+  // ==============================================
+  "editor.formatOnSave": true, // 保存时自动格式化
+  "editor.wordWrap": "on",     // 自动换行
+  "editor.rulers": [80],       // 显示80字符参考线
+
+  // ==============================================
+  // Markdown文件专属配置
+  // ==============================================
+  "[markdown]": {
+    // 使用Markdown All in One作为默认格式化器
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    // 在字符串中也启用自动补全（方便写双链和标签）
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "on",
+      "strings": "on"
+    }
+  },
+
+  // ==============================================
+  // 其他插件配置
+  // ==============================================
+  "gitlens.currentLine.enabled": false, // 关闭GitLens行内显示
+  "gitlens.codeLens.enabled": false,    // 关闭GitLens代码透镜
+  "cSpell.language": "en,zh-CN"         // 拼写检查支持英文和中文
+}

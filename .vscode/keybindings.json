@@ -1,0 +1,31 @@
+[
+  // 粘贴图片：Ctrl+Alt+V（最常用！截图后直接粘贴）
+  {
+    "key": "ctrl+alt+v",
+    "command": "markdown.extension.editing.pasteImage",
+    "when": "editorLangId == markdown"
+  },
+  // 生成目录：Ctrl+Alt+T
+  {
+    "key": "ctrl+alt+t",
+    "command": "markdown.extension.toc.create",
+    "when": "editorLangId == markdown"
+  },
+  // 切换Markdown预览：Ctrl+Shift+V
+  {
+    "key": "ctrl+shift+v",
+    "command": "markdown.preview.toggle"
+  },
+  // 切换粗体：Ctrl+B
+  {
+    "key": "ctrl+b",
+    "command": "markdown.extension.editing.toggleBold",
+    "when": "editorLangId == markdown"
+  },
+  // 切换斜体：Ctrl+I
+  {
+    "key": "ctrl+i",
+    "command": "markdown.extension.editing.toggleItalic",
+    "when": "editorLangId == markdown"
+  }
+]
