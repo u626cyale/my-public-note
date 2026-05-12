@@ -25,12 +25,12 @@ jobs:
     runs-on: ubuntu-22.04 # 运行环境：Ubuntu 22.04
     steps:
       # 步骤1：检出仓库代码
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0 # 获取所有Git历史记录，用于生成文章修改日期
       
       # 步骤2：安装Node.js环境
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 22 # Quartz 4.0要求Node.js 22+
           cache: 'npm'     # 缓存npm依赖，加速后续构建
@@ -45,7 +45,7 @@ jobs:
       
       # 步骤5：上传构建产物
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: public # 上传public目录下的所有文件
 
@@ -60,4 +60,4 @@ jobs:
       # 步骤1：部署到GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
